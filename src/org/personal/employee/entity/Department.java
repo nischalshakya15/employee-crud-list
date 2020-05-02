@@ -16,6 +16,18 @@ public class Department extends BaseEntity {
         this.description = description;
     }
 
+    public Department(Long id, String name, String description, LocalDateTime updatedAt) {
+        super(id, updatedAt);
+        this.name = name;
+        this.description = description;
+    }
+
+    public Department(String name, String description, LocalDateTime createdAt, LocalDateTime updatedAt) {
+        super(createdAt, updatedAt);
+        this.name = name;
+        this.description = description;
+    }
+
     public String getName() {
         return name;
     }

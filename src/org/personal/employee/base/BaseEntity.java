@@ -16,6 +16,16 @@ public class BaseEntity {
         this.updatedAt = updatedAt;
     }
 
+    public BaseEntity(Long id, LocalDateTime updatedAt) {
+        this.id = id;
+        this.updatedAt = updatedAt;
+    }
+
+    public BaseEntity(LocalDateTime createdAt, LocalDateTime updatedAt) {
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
+    }
+
     public Long getId() {
         return id;
     }

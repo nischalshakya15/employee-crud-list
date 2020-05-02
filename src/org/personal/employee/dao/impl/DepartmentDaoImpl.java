@@ -21,6 +21,7 @@ public class DepartmentDaoImpl implements DepartmentDao {
 
     @Override
     public Department save(Department department) {
+        department.setId(departments.get(departments.size() - 1).getId() + 1);
         departments.add(department);
         return departments.get(departments.size() - 1);
     }
