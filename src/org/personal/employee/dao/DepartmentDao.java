@@ -16,4 +16,6 @@ public interface DepartmentDao {
     void remove(Long id);
 
     Optional<Department> findOne(Long id);
+
+    Department findOneDepartment(Long id);
 }

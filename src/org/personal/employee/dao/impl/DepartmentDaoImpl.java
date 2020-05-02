@@ -47,4 +47,10 @@ public class DepartmentDaoImpl implements DepartmentDao {
     public Optional<Department> findOne(Long id) {
         return departments.stream().filter(d -> d.getId().equals(id)).findFirst();
     }
+
+    @Override
+    public Department findOneDepartment(Long id) {
+        Optional<Department> department = departments.stream().filter(d -> d.getId().equals(id)).findFirst();
+        return department.orElse(null);
+    }
 }

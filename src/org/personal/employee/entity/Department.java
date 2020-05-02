@@ -31,4 +31,15 @@ public class Department extends BaseEntity {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    @Override
+    public String toString() {
+        return "\n" + "{" +
+                "id='" + super.getId() + '\'' +
+                " name='" + name + '\'' +
+                " description='" + description + '\'' +
+                " createdAt='" + super.getCreatedAt() + '\'' +
+                " updatedAt='" + super.getUpdatedAt() + '\'' +
+                '}' + "," + "\n";
+    }
 }
