@@ -110,11 +110,17 @@ public class DepartmentView {
                 case 4:
                     view();
                     break;
+                case 5:
+                    new View();
+                    break;
                 default:
                     System.out.println("Invalid choice");
             }
             System.out.println("Press \"C\" to Continue and \"X\" to back to main menu");
             cont = scan.next().charAt(0);
+            if (Character.toLowerCase(cont) == 'x') {
+                new View();
+            }
         } while (cont == 'c' || cont == 'C');
 
     }

@@ -16,17 +16,18 @@ public class EmployeeDaoImpl implements EmployeeDao {
     private static final DepartmentDao departmentDao = new DepartmentDaoImpl();
 
     static {
-        employees.add(new Employee(1L, LocalDateTime.now(), LocalDateTime.now(),
+        employees.add(new Employee(1L,
                 "Nischal", "Shakya", "nischalshakya@gmail.com", 20000.0D,
-                departmentDao.findOneDepartment(1L)));
+                departmentDao.findOneDepartment(1L), LocalDateTime.now(), LocalDateTime.now()));
 
-        employees.add(new Employee(2L, LocalDateTime.now(), LocalDateTime.now(),
+        employees.add(new Employee(2L,
                 "Naruto", "Uzumaki", "nischalshakya@gmail.com", 20000.0D,
-                departmentDao.findOneDepartment(2L)));
+                departmentDao.findOneDepartment(2L), LocalDateTime.now(), LocalDateTime.now()));
     }
 
     @Override
     public Employee save(Employee employee) {
+        employee.setId(employees.get(employees.size() - 1).getId() + 1);
         employees.add(employee);
         return employees.get(employees.size() - 1);
     }
