@@ -10,6 +10,6 @@ It can be represented with the following ER Diagram.
 
 ## Run the application 
 * Make sure you have java 8 or higher installed in your system.
-* https://github.com/nischalshakya15/employee-crud-list.git
+* git clone https://github.com/nischalshakya15/employee-crud-list.git
 * Go to the project directory through command prompt or terminal.
 * Run the jar file ``java -jar employee-crud-list.jar``
